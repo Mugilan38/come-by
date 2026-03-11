@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Anti-Gravity Store</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/products.css">
+</head>
+<body>
+    <div class="background-grid"></div>
+
+    <header>
+        <div class="container navbar">
+            <a href="index.html" class="logo text-gradient">ANTI-GRAVITY</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+            <div class="nav-icons">
+                <a href="cart.html" class="cart-icon">
+                    <i class="fa-solid fa-shopping-cart"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </a>
+                <div class="hamburger">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="page-header">
+            <h1 class="text-gradient">Our Tech Catalog</h1>
+            <p>Browse the universe's most advanced anti-gravity hardware.</p>
+        </div>
+
+        <div class="shop-layout">
+            <!-- Sidebar Filters -->
+            <aside class="filters">
+                <div class="filter-group">
+                    <h3>Search</h3>
+                    <div class="search-box">
+                        <input type="text" id="search-input" placeholder="Search devices...">
+                        <i class="fa-solid fa-search"></i>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h3>Categories</h3>
+                    <ul class="category-list" id="category-filter">
+                        <li class="active" data-cat="All">All Tech</li>
+                        <li data-cat="Shoes">Hover Shoes</li>
+                        <li data-cat="Lamps">Float Lamps</li>
+                        <li data-cat="Hoverboards">Hoverboards</li>
+                        <li data-cat="Gadgets">Gadgets</li>
+                        <li data-cat="Accessories">Accessories</li>
+                    </ul>
+                </div>
+
+                <div class="filter-group">
+                    <h3>Price Range</h3>
+                    <input type="range" id="price-range" min="0" max="2000" value="2000" class="neon-slider">
+                    <p>Up to: $<span id="price-display">2000</span></p>
+                </div>
+            </aside>
+
+            <!-- Product Grid -->
+            <section class="products-section">
+                <div class="product-grid" id="products-grid">
+                    <!-- Products injected by JS -->
+                    <div class="loading-spinner"><i class="fa-solid fa-circle-notch fa-spin"></i></div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Anti-Gravity Store. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/products.js"></script>
+</body>
+</html>

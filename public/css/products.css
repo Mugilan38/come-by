@@ -1,0 +1,130 @@
+/* Products Page Styles */
+
+.page-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.shop-layout {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* Sidebar Filters */
+.filters {
+    width: 250px;
+    background: var(--glass-bg);
+    border: var(--glass-border);
+    padding: 25px;
+    border-radius: 12px;
+    position: sticky;
+    top: 100px;
+}
+
+.filter-group {
+    margin-bottom: 30px;
+}
+
+.filter-group h3 {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.search-box {
+    position: relative;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 10px 35px 10px 15px;
+    background: rgba(0,0,0,0.5);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: white;
+    border-radius: 4px;
+    outline: none;
+    transition: var(--transition-fast);
+}
+
+.search-box input:focus {
+    border-color: var(--primary-color);
+    box-shadow: var(--glow-primary);
+}
+
+.search-box i {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-secondary);
+}
+
+.category-list {
+    list-style: none;
+}
+
+.category-list li {
+    padding: 8px 10px;
+    cursor: pointer;
+    color: var(--text-secondary);
+    transition: var(--transition-fast);
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+
+.category-list li:hover {
+    color: var(--primary-color);
+    background: rgba(0, 240, 255, 0.05);
+}
+
+.category-list li.active {
+    color: white;
+    background: var(--primary-color);
+    box-shadow: var(--glow-primary);
+}
+
+/* Range Slider */
+.neon-slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 4px;
+    background: rgba(255,255,255,0.2);
+    outline: none;
+    border-radius: 2px;
+    margin-bottom: 10px;
+}
+
+.neon-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    cursor: pointer;
+    box-shadow: var(--glow-primary);
+}
+
+/* Main Products Area */
+.products-section {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .shop-layout {
+        flex-direction: column;
+    }
+    .filters {
+        width: 100%;
+        position: static;
+    }
+}

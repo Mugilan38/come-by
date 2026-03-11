@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Anti-Gravity Store</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/checkout.css">
+</head>
+<body>
+    <div class="background-grid"></div>
+
+    <header>
+        <div class="container navbar">
+            <a href="index.html" class="logo text-gradient">ANTI-GRAVITY</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="checkout-layout">
+            <div class="checkout-form-container">
+                <h2 class="text-gradient" style="margin-bottom: 30px;">Secure Checkout</h2>
+                
+                <form id="checkout-form">
+                    <!-- Shipping Info -->
+                    <div class="form-section">
+                        <h3><i class="fa-solid fa-location-dot"></i> Shipping Address</h3>
+                        <div class="form-grid">
+                            <div class="input-group">
+                                <label>First Name</label>
+                                <input type="text" required>
+                            </div>
+                            <div class="input-group">
+                                <label>Last Name</label>
+                                <input type="text" required>
+                            </div>
+                            <div class="input-group full-width">
+                                <label>Email Address</label>
+                                <input type="email" required>
+                            </div>
+                            <div class="input-group full-width">
+                                <label>Address</label>
+                                <input type="text" required>
+                            </div>
+                            <div class="input-group">
+                                <label>City</label>
+                                <input type="text" required>
+                            </div>
+                            <div class="input-group">
+                                <label>Postal Code</label>
+                                <input type="text" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Payment Info -->
+                    <div class="form-section">
+                        <h3><i class="fa-solid fa-credit-card"></i> Payment Method</h3>
+                        
+                        <div class="payment-methods">
+                            <div class="payment-method selected">
+                                <i class="fa-brands fa-cc-visa"></i> Credit Card
+                            </div>
+                            <div class="payment-method">
+                                <i class="fa-brands fa-paypal"></i> PayPal
+                            </div>
+                            <div class="payment-method">
+                                <i class="fa-brands fa-bitcoin"></i> Crypto
+                            </div>
+                        </div>
+
+                        <div class="form-grid">
+                            <div class="input-group full-width">
+                                <label>Card Number</label>
+                                <input type="text" placeholder="XXXX XXXX XXXX XXXX" required>
+                            </div>
+                            <div class="input-group">
+                                <label>Expiry Date</label>
+                                <input type="text" placeholder="MM/YY" required>
+                            </div>
+                            <div class="input-group">
+                                <label>CVV</label>
+                                <input type="text" placeholder="123" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn" style="width: 100%; font-size: 1.2rem; padding: 15px;">Complete Order</button>
+                </form>
+            </div>
+
+            <div class="order-summary">
+                <h3>Order Summary</h3>
+                <div id="checkout-items" class="checkout-items">
+                    <!-- JS injected items -->
+                </div>
+                <div class="summary-line">
+                    <span>Subtotal</span>
+                    <span id="checkout-subtotal">$0.00</span>
+                </div>
+                <div class="summary-line">
+                    <span>Shipping</span>
+                    <span>Free Quantum Delivery</span>
+                </div>
+                <div class="summary-line total-line">
+                    <span>Total</span>
+                    <span id="checkout-total" class="text-gradient">$0.00</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="modal">
+        <div class="modal-content">
+            <i class="fa-solid fa-circle-check" style="font-size: 4rem; color: var(--primary-color); margin-bottom: 20px;"></i>
+            <h2 class="text-gradient">Order Confirmed!</h2>
+            <p style="margin: 20px 0; color: var(--text-secondary);">Your anti-gravity hardware is being prepared for quantum delivery.</p>
+            <p>Order ID: <strong id="order-id"></strong></p>
+            <button class="btn" onclick="window.location.href='index.html'" style="margin-top: 30px;">Return to Home</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Anti-Gravity Store. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/checkout.js"></script>
+</body>
+</html>

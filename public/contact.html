@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Anti-Gravity Store</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+    <div class="background-grid"></div>
+
+    <header>
+        <div class="container navbar">
+            <a href="index.html" class="logo text-gradient">ANTI-GRAVITY</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+            <div class="nav-icons">
+                <a href="cart.html" class="cart-icon">
+                    <i class="fa-solid fa-shopping-cart"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </a>
+                <div class="hamburger">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="page-header" style="text-align: center; margin-bottom: 50px;">
+            <h1 class="text-gradient">Transmission Link</h1>
+            <p>Establish a secure comms channel with our engineering team.</p>
+        </div>
+
+        <div class="contact-layout">
+            <div class="contact-info">
+                <h3>Headquarters</h3>
+                <div class="info-block">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <h4>Orbital Station Alpha</h4>
+                        <p>Sector-9, Low Earth Orbit</p>
+                    </div>
+                </div>
+                
+                <div class="info-block">
+                    <i class="fa-solid fa-envelope"></i>
+                    <div>
+                        <h4>Comm Channel</h4>
+                        <p>support@antigravity.corp</p>
+                    </div>
+                </div>
+
+                <div class="info-block">
+                    <i class="fa-solid fa-phone"></i>
+                    <div>
+                        <h4>Direct Uplink</h4>
+                        <p>+1 (800) 0-GRAVITY</p>
+                    </div>
+                </div>
+
+                <h3 style="margin-top: 40px;">Support Network</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-discord"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+
+            <div class="contact-form-container">
+                <form id="contact-form" onsubmit="event.preventDefault(); showNotification('Message Transmitted Successfully!', 'success'); this.reset();">
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label>Operative Name</label>
+                            <input type="text" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Transmission ID (Email)</label>
+                            <input type="email" required>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>Subject</label>
+                        <input type="text" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Message Payload</label>
+                        <textarea rows="6" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn" style="width: 100%; font-size: 1.1rem; margin-top: 10px;">Transmit Payload</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Anti-Gravity Store. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Anti-Gravity Store</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <!-- Chart.js for data viz -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="admin-body">
+    
+    <!-- Sidebar -->
+    <aside class="admin-sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2 class="logo text-gradient">AG ADMIN</h2>
+        </div>
+        
+        <ul class="admin-menu">
+            <li class="active"><a href="#"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
+            <li><a href="#"><i class="fa-solid fa-box"></i> Hardware Inventory</a></li>
+            <li><a href="#"><i class="fa-solid fa-cart-shopping"></i> Active Orders</a></li>
+            <li><a href="#"><i class="fa-solid fa-users"></i> Operatives</a></li>
+            <li><a href="#"><i class="fa-solid fa-robot"></i> AI Engine Config</a></li>
+            <li><a href="#"><i class="fa-solid fa-gear"></i> System Settings</a></li>
+        </ul>
+        
+        <div class="sidebar-footer">
+            <a href="index.html" class="btn btn-secondary" style="width: 100%; text-align: center; font-size: 0.9rem; padding: 10px;">Exit Terminal</a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="admin-main">
+        <header class="admin-header">
+            <div class="header-left">
+                <button id="toggle-sidebar" class="admin-btn-icon"><i class="fa-solid fa-bars"></i></button>
+                <h2 style="margin-left: 15px;">Command Center</h2>
+            </div>
+            <div class="header-right">
+                <div class="admin-search">
+                    <i class="fa-solid fa-search"></i>
+                    <input type="text" placeholder="Search databanks...">
+                </div>
+                <div class="admin-profile">
+                    <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100" alt="Admin" class="avatar">
+                    <span>Commander Alpha</span>
+                </div>
+            </div>
+        </header>
+        
+        <div class="admin-content">
+            <!-- KPIs -->
+            <div class="kpi-grid">
+                <div class="kpi-card">
+                    <div class="kpi-icon" style="color: var(--primary-color); background: rgba(0, 240, 255, 0.1);"><i class="fa-solid fa-sack-dollar"></i></div>
+                    <div class="kpi-info">
+                        <h3>$124,500</h3>
+                        <p>Total Revenue (24h)</p>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-icon" style="color: var(--secondary-color); background: rgba(191, 0, 255, 0.1);"><i class="fa-solid fa-boxes-stacked"></i></div>
+                    <div class="kpi-info">
+                        <h3>842</h3>
+                        <p>Units Deployed</p>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-icon" style="color: #ff003c; background: rgba(255, 0, 60, 0.1);"><i class="fa-solid fa-user-astronaut"></i></div>
+                    <div class="kpi-info">
+                        <h3>4,209</h3>
+                        <p>Active Operatives</p>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-icon" style="color: #00ffaa; background: rgba(0, 255, 170, 0.1);"><i class="fa-solid fa-robot"></i></div>
+                    <div class="kpi-info">
+                        <h3>98.2%</h3>
+                        <p>AI Neural Match Rate</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Charts Section -->
+            <div class="charts-section">
+                <div class="chart-container">
+                    <h3>Revenue Trajectory</h3>
+                    <canvas id="revenueChart"></canvas>
+                </div>
+                <div class="recent-orders">
+                    <h3>Latest Transmissions</h3>
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Operative</th>
+                                <th>Status</th>
+                                <th>Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody id="orders-tbody">
+                            <!-- JS injected -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>
