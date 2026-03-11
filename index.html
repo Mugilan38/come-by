@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anti-Gravity Store</title>
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+
+<body>
+    <div class="background-grid"></div>
+
+    <header>
+        <div class="container navbar">
+            <a href="index.html" class="logo text-gradient">ANTI-GRAVITY</a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+            <div class="nav-icons">
+                <a href="cart.html" class="cart-icon">
+                    <i class="fa-solid fa-shopping-cart"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </a>
+                <div class="hamburger">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero container">
+            <div class="hero-content">
+                <h1>Defy <span class="text-gradient hover-effect">Gravity</span></h1>
+                <p>Welcome to the future. Discover our collection of state-of-the-art anti-gravity products, powered by
+                    AI to elevate your reality.</p>
+                <div class="hero-buttons">
+                    <a href="products.html" class="btn">Shop Now</a>
+                    <a href="#recommendations" class="btn btn-secondary">AI Picks</a>
+                </div>
+            </div>
+            <div class="hero-image-container">
+                <div class="floating-orb"></div>
+                <!-- Placeholder for an awesome 3D looking floating element -->
+                <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600&auto=format&fit=crop&q=60"
+                    alt="Floating Astronaut" class="hero-image">
+            </div>
+        </section>
+
+        <!-- Product Categories -->
+        <section class="categories container">
+            <h2 class="section-title">Explore <span class="text-gradient">Categories</span></h2>
+            <div class="category-grid">
+                <a href="products.html?category=Shoes" class="category-card">
+                    <i class="fa-solid fa-shoe-prints"></i>
+                    <h3>Hover Shoes</h3>
+                </a>
+                <a href="products.html?category=Hoverboards" class="category-card">
+                    <i class="fa-solid fa-rocket"></i>
+                    <h3>Hoverboards</h3>
+                </a>
+                <a href="products.html?category=Lamps" class="category-card">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <h3>Float Lamps</h3>
+                </a>
+                <a href="products.html?category=Gadgets" class="category-card">
+                    <i class="fa-solid fa-microchip"></i>
+                    <h3>Gadgets</h3>
+                </a>
+            </div>
+        </section>
+
+        <!-- AI Recommendations -->
+        <section id="recommendations" class="recommendations container">
+            <div class="section-header">
+                <h2 class="section-title">AI <span class="text-gradient">Recommended</span> For You</h2>
+                <div class="ai-badge"><i class="fa-solid fa-robot"></i> AI Powered</div>
+            </div>
+            <div class="product-grid" id="featured-grid">
+                <!-- Injected via JS -->
+                <div class="loading-spinner"><i class="fa-solid fa-circle-notch fa-spin"></i></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="text-gradient">ANTI-GRAVITY</h3>
+                    <p>Elevating humanity with next-generation hovering tech and gravity neutralizing technologies.</p>
+                    <div class="social-links" style="margin-top: 20px;">
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-discord"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <div style="display: flex; flex-direction: column;">
+                        <a href="index.html">Home</a>
+                        <a href="products.html">Products</a>
+                        <a href="cart.html">Cart</a>
+                        <a href="contact.html">Contact Us</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe for updates on our latest zero-G devices.</p>
+                    <div style="margin-top: 15px; display: flex;">
+                        <input type="email" placeholder="Your email..."
+                            style="padding: 10px; border: 1px solid var(--primary-color); background: var(--surface-color); color: white; border-radius: 4px 0 0 4px; outline: none; width: 100%;">
+                        <button class="btn" style="border-radius: 0 4px 4px 0; padding: 10px 15px;"><i
+                                class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Anti-Gravity Store. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/home.js"></script>
+</body>
+
+</html>
