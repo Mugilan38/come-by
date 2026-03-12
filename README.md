@@ -5,7 +5,7 @@ A futuristic, AI-powered eCommerce hardware store built with HTML, CSS, and vani
 ## 🌐 Live Website
 
 Click the link below to open the live store directly in your web browser:
-👉 **[Open Anti-Gravity Store](https://Mugilan38.github.io/come-by/public/index.html)** 👈
+👉 **[Open Anti-Gravity Store]*https://mugilan38.github.io/come-by/* 👈
 
 *(Note: The link above assumes GitHub Pages is enabled on the `main` branch).*
 
