@@ -1,4 +1,4 @@
-# Anti-Gravity Store 🚀
+COME BUY 🚀
 
 A futuristic, AI-powered eCommerce hardware store built with HTML, CSS, and vanilla JS. Features dark UI, neon colors, glassmorphism, 3D animated cards, search, checkout flows, and a simulated backend runtime!
 
